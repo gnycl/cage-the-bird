@@ -1,1 +1,6 @@
 config.yml
+.bundle
+bundle
+*.swp
+.DS_Store
+.DS_Store?
