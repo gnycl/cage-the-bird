@@ -1,4 +1,4 @@
-RSpec.describe Wrangler do
+RSpec.describe CageTheBird::Wrangler do
 
   describe '.wranglers' do
     context 'creates array of wranglers' do

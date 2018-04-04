@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'twitter'
-gem 'rspec'
-gem 'require_all'
+# The gem's dependencies are specified in cage_the_bird.gemspec
+gemspec

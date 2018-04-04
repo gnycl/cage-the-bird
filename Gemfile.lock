@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    cage_the_bird (0.2.0)
+      require_all
+      twitter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,9 +64,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  require_all
+  cage_the_bird!
   rspec
-  twitter
 
 BUNDLED WITH
    1.16.0

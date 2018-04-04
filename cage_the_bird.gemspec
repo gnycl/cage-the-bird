@@ -1,43 +1,27 @@
-source "https://rubygems.org"
-
-# Specify your gem's dependencies in comment_builder.gemspec
-gemspec
-
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'lastpassify/version'
+require 'cage_the_bird/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "lastpassify"
-  spec.version       = LastPassify::VERSION
-  spec.authors       = ["Eric Eklund (eeklund), Remy Abdullahi (abdu0299)"]
-  spec.email         = ["eeklund@umn.edu", "abdu0299@umn.edu"]
+Gem::Specification.new do |s|
+  s.name = "cage_the_bird"
+  s.version = CageTheBird::VERSION
+  s.license = 'MIT'
+  s.date = '2018-04-04'
 
-  spec.summary       = %q{Populate ERB file with values from LastPass}
-  spec.description   = %q{This gem populates a given ERB/YAML file with values from LastPass using LastPass-CLI.}
-  spec.homepage      = "https://github.umn.edu/asrweb/lastpassify"
-  spec.license       = "MIT"
+  s.author = "Harry Stebbins"
+  s.email = 'hcstebbins@gmail.com'
+  s.homepage = 'https://github.com/stebbins/cage-the-bird'
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://artifactory.umn.edu/artifactory/api/gems/asr-rubygems-local"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  s.summary = "Cage the Bird is a simple Ruby command line application for purging your Twitter account of Tweets, Retweets, and Likes."
+
+  s.files         = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(spec)/})
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
-  spec.required_ruby_version = ">= 2.0.0"
-
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "rspec"
-  spec.add_dependency "require_all"
-  spec.add_dependency "twitter"
+  s.require_paths = ["lib"]
+  s.add_dependency "require_all"
+  s.add_dependency "twitter"
+  s.add_development_dependency "rspec"
 end
 

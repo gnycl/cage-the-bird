@@ -13,7 +13,7 @@ def start_app(client)
   print '> '
   wranglers = gets.chomp.split
   wranglers = ['likes', 'retweets', 'tweets'] if wranglers.include?('all')
-  cage = Wrangler.new(wranglers)
+  cage = CageTheBird::Wrangler.new(wranglers)
   puts "Loaded..."
   puts "To continue, type 'yes' without quotes."
   puts "Any other input will cancel the process."
