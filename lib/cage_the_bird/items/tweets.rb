@@ -1,2 +1,2 @@
-class Tweets < Item
+class Tweets < CageTheBird::Item
 end
